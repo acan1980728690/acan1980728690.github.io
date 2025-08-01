@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="false" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>面向对象中级 | acan的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="包 包的作用 区分相同的类当类很多的时候，可以很好的管理类控制访问范围  基本语法 1package somethong package关键字，表示打包，something表示包名 包的本质 实际上就是创建了不同的文件夹来保存类文件 包的命名 命名规则  只能包含数字，字母，下划线，但是不能用数字开头，也不能是关键字或保留字  命名规范  一般是小写字母+小圆点 com.公司名.项目名.业务模块名">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象中级">
+<meta property="og:url" content="http://example.com/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%BA%A7/index.html">
+<meta property="og:site_name" content="acan的博客">
+<meta property="og:description" content="包 包的作用 区分相同的类当类很多的时候，可以很好的管理类控制访问范围  基本语法 1package somethong package关键字，表示打包，something表示包名 包的本质 实际上就是创建了不同的文件夹来保存类文件 包的命名 命名规则  只能包含数字，字母，下划线，但是不能用数字开头，也不能是关键字或保留字  命名规范  一般是小写字母+小圆点 com.公司名.项目名.业务模块名">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-01T12:04:36.000Z">
+<meta property="article:modified_time" content="2025-08-01T12:27:38.071Z">
+<meta property="article:author" content="acan">
+<meta property="article:tag" content="包">
+<meta property="article:tag" content="访问修饰符">
+<meta property="article:tag" content="面向对象三大特征">
+<meta property="article:tag" content="Object类">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="acan的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/avatar.jpg">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>acan的博客 </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS 订阅">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/images/avatar.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">acan </div>
+      <div class="dot"></div>
+      <div class="subtitle">这是acan的个人博客，记录我的学习生活，希望能对你有用 </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/acan1980728690?tab=repositories" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">
+                通用Web基础
+                <div class="category-count">5</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Java/">
+                Java
+                <div class="category-count">2</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/">
+                基础
+                <div class="category-count">2</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                面向对象
+                <div class="category-count">2</div>
+            </a>
+        </div></div></div></div></div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/this%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">this关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag">作用域</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85/" rel="tag">包</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/" rel="tag">可变参数</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90/" rel="tag">对象创建的流程分析</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/" rel="tag">方法的重载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%99%A8/" rel="tag">构造器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/" rel="tag">访问修饰符</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" rel="tag">面向对象三大特征</a></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="post-面向对象中级" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        面向对象中级
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-01T12:04:36.000Z" itemprop="datePublished">2025-08-01</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Java/">Java</a>><a class="meta-cate-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/">基础</a>><a class="meta-cate-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            3.1k 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8C%85/" rel="tag">包</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/" rel="tag">访问修饰符</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" rel="tag">面向对象三大特征</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><p> <strong>包的作用</strong></p>
+<p>区分相同的类<br>当类很多的时候，可以很好的管理类<br>控制访问范围</p>
+<p> <strong>基本语法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">package somethong</span><br></pre></td></tr></table></figure>
+<p>package关键字，表示打包，something表示包名</p>
+<p><strong>包的本质</strong></p>
+<p>实际上就是创建了不同的文件夹来保存类文件</p>
+<p><strong>包的命名</strong></p>
+<p>命名规则</p>
+<ul>
+<li>只能包含数字，字母，下划线，但是不能用数字开头，也不能是关键字或保留字</li>
+</ul>
+<p>命名规范</p>
+<ul>
+<li>一般是小写字母+小圆点</li>
+<li>com.公司名.项目名.业务模块名</li>
+</ul>
+<p><strong>常用的包</strong>   </p>
+<ul>
+<li>java.lang默认引入，不需要再引入</li>
+<li>java.util 系统提供的工具包，工具类，使用Scanner</li>
+<li>java.net网络包</li>
+<li>java.awt 做java的界面开发</li>
+</ul>
+<p><strong>引入包</strong></p>
+<p>import 包</p>
+<p>import java.util.Scanner;表示只引入一个类Scanner</p>
+<p>import java.util.*;表示将java.util的包全部都引入</p>
+<h2 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h2><p>四种修饰符,public,protected,默认,private</p>
+<ul>
+<li>public:对外公开</li>
+<li>protected,对子类和同一个包中的类公开</li>
+<li>默认：没有修饰符，对同一个包的类公开</li>
+<li>private:只有类本身可以访问，不对外公开</li>
+</ul>
+<h2 id="面向对象三大特征"><a href="#面向对象三大特征" class="headerlink" title="面向对象三大特征"></a>面向对象三大特征</h2><h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>封装就是把抽象出的数据（属性）和对数据的操作（方法）封装在一起，数据被保护在内部，程序的其他部分只有通过被授权的操作（方法），才能对数据进行操作</p>
+<p>封装可以隐藏细节</p>
+<p>封装可以对数据进行验证，保证安全合理</p>
+<p><strong>封装的实现</strong></p>
+<p>属性的私有化(使用private)</p>
+<p>提供一个公共的方法set,用来对属性进行判断和赋值</p>
+<p>提供一个公共的方法get，用于获取属性的值</p>
+<p>构造器问题</p>
+<ul>
+<li>直接使用构造器会绕过set方法，无法验证数据</li>
+<li>解决：在构造器里调用set方法</li>
+</ul>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p><strong>概念</strong><br>继承可以解决代码复用，当多个类存在相同的属性（变量）和方法时，可以从这些类中抽象出父类，在父类中定义这些相同的属性和 方法，所有的子类不需要重新定义这些属性和方法，只需要通过extends来声明继承父类即可</p>
+<p>子类会自动拥有父类定义的属性和方法</p>
+<p>父类又叫超类，基类</p>
+<p>子类又叫派生<br><strong>语法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class 子类 extends 父类&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>细节</strong></p>
+<p>子类继承了所有的属性和方法，但是私有属性和方法不能直接在子类中访问，要通过公开的方法访问</p>
+<p>子类必须调用父类的构造器，完成父类的初始化</p>
+<p>当创建子类对象时，不管使用子类的那个构造器，默认情况下总会去调用父类的无参构造器，如果父类没有提供无参构造器，则必须在子类的构造器用super去指定使用父类的哪个构造器完成对父类的初始化工作，否则，编译不会通过</p>
+<p>如果希望指定去调用父类的某个构造器，则显式的调用一下</p>
+<p>super在使用时，必须放在构造器第一行</p>
+<p>super()和this()都只能放在构造器第一行，因此这两个方法不能共存在一个构造器</p>
+<p>java所有类都是Object类的子类</p>
+<p>父类构造器的调用不限于直接父类！将一直往上追溯直到Object类（顶级父类）</p>
+<p>子类最多只能继承一个父类（指直接继承），即java中是单继承机制</p>
+<p>不能滥用继承，子类和父类之间必须瞒住is-a的逻辑关系</p>
+<p><strong>本质</strong></p>
+<p>内存</p>
+<ol>
+<li>继承时，先在方法区创建Object,然后随着父类子类一路创建下来</li>
+<li>在堆中分配一段空间，然后随着父类子类的顺序分配属性（属性名字不影响）</li>
+<li>在栈内创建类的引用,指向堆中的地址</li>
+</ol>
+<p>通过查找关系找信息</p>
+<ol>
+<li>先看子类是否有该属性</li>
+<li>如果子类有这个属性，并且可以访问，则返回信息</li>
+<li>如果子类没有这个属性，就看父类有没有这个属性</li>
+<li>如果父类也没有，就重复上一步，直到找到object中为止</li>
+</ol>
+<p><strong>super关键词</strong></p>
+<p>super代表父类的引用，用于访问父类的属性，方法，构造器<br>访问父类的属性，看访问修饰符限定范围</p>
+<ul>
+<li>suepr.属性名；</li>
+</ul>
+<p>访问父类的方法，看访问修饰符限定范围</p>
+<ul>
+<li>super.方法名（参数列表）；</li>
+</ul>
+<p>访问父类的构造器，看访问修饰符限定范围</p>
+<ul>
+<li>super.(参数列表)</li>
+</ul>
+<p>super的访问不限于直接父类，如果爷爷类和本类有同名的成员，也可以使用super期访问爷爷类的成员；如果多个基类（上级类）都有同名的成员，使用super访问遵循就近原则，A -&gt; B -&gt;  C</p>
+<p><strong>override方法重写</strong></p>
+<p>介绍</p>
+<p>子类有一个方法，和父类的某个方法名称，返回类型，参数都一样，那么我们就说子类的这个方法覆盖了父类的那个方法</p>
+<p>注意事项和使用细节</p>
+<ul>
+<li>子类的方法的参数和方法名称必须都一样</li>
+<li>子类方法的返回类型和父类方法返回类型一样，或者是父类返回类型的子类，比如父类返回object，子类方法返回String</li>
+<li>子类方法不能缩小父类方法的访问权限（访问修饰符）</li>
+</ul>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>方法或对象具有多种形态，多态是建立在封装和继承基础之上</p>
+<h4 id="多态的具体表现"><a href="#多态的具体表现" class="headerlink" title="多态的具体表现"></a>多态的具体表现</h4><h5 id="方法的多态"><a href="#方法的多态" class="headerlink" title="方法的多态"></a>方法的多态</h5><p>重写和重载就能体现多态</p>
+<h5 id="对象的多态"><a href="#对象的多态" class="headerlink" title="对象的多态"></a>对象的多态</h5><p><strong>一个对象的编译类型和运行类型可以不一致</strong>，编译类型在定义对象时，就确定了，不能改变，运行类型是可以变化的，编译类型看定义时&#x3D;的左边，运行类型看&#x3D;的右边</p>
+<p><strong>例子</strong></p>
+<ul>
+<li>Animal的子类是Dog和Cat</li>
+<li>Animal animal &#x3D; new Dog() animal编译类型是Animal 运行Dog</li>
+<li>animal &#x3D; new Cat(); animal的运行类型变成了Cat，编译类型仍然是Animal</li>
+</ul>
+<p><strong>多态的注意事项和细节</strong></p>
+<p>多态的前提是两个类存在继承关系</p>
+<p>多态的向上转型</p>
+<ul>
+<li>本质：父类的引用指向了子类的对象</li>
+<li>语法：父类类型 引用名 &#x3D;&#x3D; new 子类类型</li>
+<li>特点：编译类型看左边，运行类型看右边。可以调用父类中的所有成员（遵循访问修饰符），不能调用子类中特有成员（重写的方法不算特有成员）</li>
+<li>能调用那些成员，是由编译类型决定的</li>
+<li>最终运行看子类的具体实现</li>
+</ul>
+<p>多态的向下转型</p>
+<ul>
+<li>语法：子类类型 引用名 &#x3D; （子类类型）父类引用；</li>
+<li>只能强转父类的引用，不能强转父类的对象</li>
+<li>要求父类的引用必须指向的是当前目标类型的对象</li>
+<li>可以调用子类类型中的所有成员</li>
+</ul>
+<p>属性没有重写之说，属性的值看编译类型</p>
+<p>instanceOf比较操作符，用于判断对象的类型是否是xx类型或XX类型的子类型（运行类型）</p>
+<ul>
+<li>例子<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bb instanceof BB //返回True，bb是BB类型</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="java的动态绑定机制"><a href="#java的动态绑定机制" class="headerlink" title="java的动态绑定机制"></a>java的动态绑定机制</h4><p>当调用对象方法的时候，该方法会和该对象的内存地址&#x2F;运行类型绑定</p>
+<p>当调用对象属性时，没有动态绑定机制，哪里声明，哪里使用</p>
+<h4 id="多态的应用"><a href="#多态的应用" class="headerlink" title="多态的应用"></a>多态的应用</h4><p>可以用来创建多态数组或者多态参数()</p>
+<h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><h3 id="与equals的区别"><a href="#与equals的区别" class="headerlink" title="&#x3D;&#x3D;与equals的区别"></a>&#x3D;&#x3D;与equals的区别</h3><p>&#x3D;&#x3D;对于基本类型和引用类型都可以判断，如果是基本类型，判断值，如果是引用类型，判断对象的引用，也就是判断是不是同个对象</p>
+<p>equals是object中的一个方法，只能用来判断引用类型，默认判断的是地址是否相等，子类中往往重写该方法，用于判断内容是否相等，比如Interger,String</p>
+<h3 id="hascode"><a href="#hascode" class="headerlink" title="hascode"></a>hascode</h3><p>提高具有哈希结构的容器的效率</p>
+<p>两个引用，如果指向的是同一个对象，则哈希值肯定是一样的</p>
+<p>两个引用，如果指向的是不同对象，则哈希值是不一样的</p>
+<p>哈希值主要根据地址号来的，不能完全将哈希值等价于地址</p>
+<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h3><p>默认返回：全类名+@ +哈希值的十六进制，子类往往重写toString方法，用于返回对象的属性信息（全类名的意思是包名+类名）</p>
+<p>重写toString方法，打印对象或拼接对象时，都会自动调用该对象的toString形式。</p>
+<p>当直接输出一个对象时，toString方法会被默认的调用</p>
+<h3 id="finalize"><a href="#finalize" class="headerlink" title="finalize"></a>finalize</h3><p>当对象被回收时，系统自动的调用该对象的finalize方法。子类可以重写该方法，做一些释放资源的操作</p>
+<p>什么时候被回收：当某个对象没有任何引用时，则jvm就认为这个对象时一个垃圾对象，就会使用垃圾回收机制来销毁该对象，在销毁该对象前，会先调用finalize方法</p>
+<p>垃圾回收机制的调用，是由系统来决定（既有自己的gc算法），也可以通过System.gc()主动触发垃圾回收机制</p>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left  disabled "
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/"
+      title="面向对象基础"
+     >
+
+    <p class="title-text">
+      
+        面向对象基础
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+  
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <div id="comment-card" class="comment-card">
+    <div class="main-title-bar">
+      <div class="main-title-dot"></div>
+      <div class="main-title">留言 </div>
+    </div>
+    <div id="vcomments"></div>
+  </div>
+  <script>
+      new Valine({"enable":true,"appId":"nllUSWQEMs0La7CYajWCfp0g-gzGzoHsz","appKey":"aLiW829Tcl5EMKjuEKj2RAK5","placeholder":"留下你宝贵的留言！","pageSize":10,"highlight":true,"serverURLs":"https://nlluswqe.lc-cn-n1-shared.com","el":"#vcomments"});
+  </script>
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2025 acan<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>
