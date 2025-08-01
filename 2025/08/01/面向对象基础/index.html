@@ -14,20 +14,29 @@
   
 
   
-  <title>acan的博客</title>
+  <title>面向对象基础 | acan的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="搭个博客方便别人看也方便自己看，有个模版好看多了">
-<meta property="og:type" content="website">
-<meta property="og:title" content="acan的博客">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="面向对象基础递归递归的意思就是函数自己调用自己 示例： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061public class Queen &#123;    public static void main(String">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象基础">
+<meta property="og:url" content="http://example.com/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="acan的博客">
-<meta property="og:description" content="搭个博客方便别人看也方便自己看，有个模版好看多了">
+<meta property="og:description" content="面向对象基础递归递归的意思就是函数自己调用自己 示例： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061public class Queen &#123;    public static void main(String">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-01T11:53:27.000Z">
+<meta property="article:modified_time" content="2025-08-01T12:03:44.227Z">
 <meta property="article:author" content="acan">
+<meta property="article:tag" content="递归">
+<meta property="article:tag" content="方法的重载">
+<meta property="article:tag" content="可变参数">
+<meta property="article:tag" content="作用域">
+<meta property="article:tag" content="构造器">
+<meta property="article:tag" content="对象创建的流程分析">
+<meta property="article:tag" content="this关键字">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="acan的博客" type="application/atom+xml">
@@ -45,7 +54,7 @@
   
    
   <div id="main-grid" class="  ">
-    <div id="nav" class=" is_home "  >
+    <div id="nav" class=""  >
       <navbar id="navbar">
   <nav id="title-nav">
     <a href="/">
@@ -177,117 +186,12 @@
 </sidebar>
     </div>
     <div id="content-body">
-      
-   
-
-
-<article id="post-面向对象中级" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%BA%A7/">面向对象中级</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-01T12:04:36.000Z" itemprop="datePublished">2025-08-01</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Java/">Java</a>><a class="meta-cate-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/">基础</a>><a class="meta-cate-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            3.1k 词 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8C%85/" rel="tag">包</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/" rel="tag">访问修饰符</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" rel="tag">面向对象三大特征</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              包 包的作用
-区分相同的类当类很多的时候，可以很好的管理类控制访问范围
- 基本语法
-1package somethong
-package关键字，表示打包，something表示包名
-包的本质
-实际上就是创建了不同的文件夹来保存类文件
-包的命名
-命名规则
-
-只能包含数字，字母，下划线，但是不能用数字开头，也不能是关键字或保留字
-
-命名规范
-
-一般是小写字母+小圆点
-com.公司名.项目名.业务模块名
-
-常用的包   
-
-java.lang默认引入，不需要再引入
-java.util 系统提供的工具包，工具类，使用Scanner
-java.net网络包
-java.awt 做java的界面开发
-
-引入包
-import 包
-import java.util.Scanner;表示只引入一个类Scanner
-import java.util.*;表示将java.util的包全部都引入
-访问修饰符四种修饰符,public,protected,默认,private
-
-public:对外公开
-protected,对子类和同一个包中的类公开
-默认：没有修饰符，对同一个包的类公开
-private:只有类...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%BA%A7/" 
-    >
        
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
 
 
 <article id="post-面向对象基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
    
   <div class="article-inner">
     <div class="article-main">
@@ -297,8 +201,8 @@ private:只有类...
   <div class="main-title-dot"></div>
   
     
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/">面向对象基础</a>
+      <h1 class="p-name article-title" itemprop="headline name">
+        面向对象基础
       </h1>
     
   
@@ -326,13 +230,73 @@ private:只有类...
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <div class="truncate-text">
-            
-              面向对象基础递归递归的意思就是函数自己调用自己
-示例：
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061public class Queen &#123;    public static void main(String[] args) &#123;        int[][] board = new int[8][8];        T t = new T();        for(int i=0;i&lt;8;i++) &#123;            for (int j = 0; j &lt; 8; j++) &#123;                board[i][j] = 0;            &#125;        &#125;        t.placeQueen(board,0);    &#125;&#125;class T&#123;    int[] re...
-            
-          </div>
+          <h2 id="面向对象基础"><a href="#面向对象基础" class="headerlink" title="面向对象基础"></a>面向对象基础</h2><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>递归的意思就是函数自己调用自己</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">public class Queen &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[][] board = new int[8][8];</span><br><span class="line">        T t = new T();</span><br><span class="line">        for(int i=0;i&lt;8;i++) &#123;</span><br><span class="line">            for (int j = 0; j &lt; 8; j++) &#123;</span><br><span class="line">                board[i][j] = 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        t.placeQueen(board,0);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class T&#123;</span><br><span class="line">    int[] result = new int[8];</span><br><span class="line">    public void placeQueen(int[][] board,int m)&#123;</span><br><span class="line">        if(m==8)&#123;</span><br><span class="line">            for(int i=0;i&lt;8;i++)&#123;</span><br><span class="line"></span><br><span class="line">                System.out.print(result[i] + 1);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            for(int i=0;i&lt;8;i++)&#123;</span><br><span class="line">                if(isSafe(board,m,i))&#123;</span><br><span class="line">                    board[m][i]=1;</span><br><span class="line">                    result[m]=i;</span><br><span class="line">                    placeQueen(board,m+1);</span><br><span class="line">                &#125;</span><br><span class="line">                board[m][i]=0;</span><br><span class="line">                result[m]=0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        public boolean isSafe(int[][] board,int row,int col) &#123;</span><br><span class="line">            for (int i = 0; i &lt; row; i++) &#123;</span><br><span class="line">                if (board[i][col] == 1) &#123;</span><br><span class="line">                    return false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            int i = row - 1, j = col - 1;</span><br><span class="line">            while (i &gt;= 0 &amp;&amp; j &gt;= 0) &#123;</span><br><span class="line">                if (board[i][j] == 1) &#123;</span><br><span class="line">                    return false;</span><br><span class="line">                &#125;</span><br><span class="line">                i--;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            i = row - 1;</span><br><span class="line">            j = col + 1;</span><br><span class="line">            while (i &gt;= 0 &amp;&amp; j &lt; 8) &#123;</span><br><span class="line">                if (board[i][j] == 1) &#123;</span><br><span class="line">                    return false;</span><br><span class="line">                &#125;</span><br><span class="line">                i--;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h3><p>定义：改变函数的参数列表，其他没有要求</p>
+<p>例子:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public void nums(int a,int b)&#123;&#125;</span><br><span class="line">public void nums(double a, double b)</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>就是方法的重载，但是参数只有个数不同。类型相同</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public void nums(int ... num)//语法，传进去的参数相当于一个数组</span><br></pre></td></tr></table></figure>
+
+<p><strong>细节</strong></p>
+<ul>
+<li>可变参数的实参个数可以是零或者多个</li>
+<li>可变参数的实质是数组</li>
+<li>可变参数可以和其他参数一起放在形参列表中，但是必须只有一个可变参数并且可变参数在最后面</li>
+</ul>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><ol>
+<li>属性和局部变量可以重名，访问时遵循就近原则</li>
+<li>同一个作用域中不能重名</li>
+<li>生命周期都是作用域创建开始，作用域结束就死亡</li>
+<li>属性可以加修饰符，局部变量不能加</li>
+</ol>
+<p>具体看菜鸟</p>
+<h3 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h3><p><strong>语法</strong></p>
+<p><code> [修饰符] 方法名（参数）&#123;&#125;</code></p>
+<p><strong>使用方法</strong></p>
+<ul>
+<li>构造器的修饰符可以默认</li>
+<li>构造器没有返回值</li>
+<li>方法名必须和类名一样</li>
+</ul>
+<p><strong>例子</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    private String gender;</span><br><span class="line"></span><br><span class="line">    public Person(String name, int age, String gender) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">        this.gender = gender;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">//调用</span><br><span class="line">Person p1 = new Person(&quot;Smith&quot;,18,&quot;男&quot;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>作用</strong></p>
+<ul>
+<li>构造器使得在创建类的时候可以直接指定属性的值</li>
+</ul>
+<p><strong>细节</strong></p>
+<ul>
+<li>一个类可以写多个构造器，即构造器重载</li>
+<li>构造器是完成对象的初始化，不是创建对象</li>
+<li>在创建对象的时候，系统自动的调用该类的构造方法</li>
+<li>如果没有定义构造方法，系统会自动给类生成一个默认无参构造方法，比如Person(){}<ul>
+<li>一旦定义了自己的构造器，默认的构造器就覆盖了</li>
+</ul>
+</li>
+</ul>
+<h3 id="对象创建的流程分析"><a href="#对象创建的流程分析" class="headerlink" title="对象创建的流程分析"></a>对象创建的流程分析</h3><ol>
+<li>在方法区加载类</li>
+<li>在堆里初始化属性</li>
+<li>调用构造器函数，重新赋值（引用类型的值会放在常量区）</li>
+<li>在栈里创建对象的引用（对象名），指向这个类</li>
+</ol>
+<h3 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h3><p>通过this.name这样就可以在成员变量和局部变量相同时，使用this.来访问成员的属性<br>哪一个对象调用了，this就代表了哪个对象<br>在堆中被创建的对象里，有一个隐藏属性this,this的值就是对象的内存位置</p>
+<p><strong>细节</strong></p>
+<ul>
+<li>this关键字可以用来访问本类的属性，方法，构造器</li>
+<li>this用于区分当前类的属性和局部变量</li>
+<li>访问成员方法的语法：this.方法名（参数列表）;</li>
+<li>访问构造器语法:this(参数列表);注意只能在构造器中使用，并且只能在构造器第一行（即只能在构造器中调用构造器）</li>
+<li>this不能再类定义的外部使用，只能在类定义的方法中使用</li>
+</ul>
+
         
       </div>
 
@@ -340,413 +304,54 @@ private:只有类...
     </div>
     
      
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
   </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left "
+    
+      href="/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%BA%A7/"
+      title="面向对象中级"
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+      
+        面向对象中级
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2025/08/01/XML/"
+      title="XML"
+     >
+
+    <p class="title-text">
+      
+        XML
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
   
 </article>
 
 
-
-
-
-
-
-   
-
-
-<article id="post-XML" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
   
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/01/XML/">XML</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-01T11:52:08.000Z" itemprop="datePublished">2025-08-01</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">通用Web基础</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            29 词 
-          </div>
-        </div>
-        
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              知道这玩意和html差不多而且主要用来配置各种东西即可
-详细
-
-            
-          </div>
-        
-      </div>
-
-         
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <div id="comment-card" class="comment-card">
+    <div class="main-title-bar">
+      <div class="main-title-dot"></div>
+      <div class="main-title">留言 </div>
     </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/01/XML/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
+    <div id="vcomments"></div>
   </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-REST风格" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/01/REST%E9%A3%8E%E6%A0%BC/">REST风格</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-01T11:50:32.000Z" itemprop="datePublished">2025-08-01</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">通用Web基础</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            325 词 
-          </div>
-        </div>
-        
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              REST（Representational State Transfer），表述性状态转换，它是一种软件架构风格
-示例
-1234http://localhost:8080/users/1       GET：查询id为1的用户http://localhost:8080/users          POST：新增用户http://localhost:8080/users          PUT：修改用户http://localhost:8080/users/1       DELETE：删除id为1的用户
-
-其中总结起来，就一句话：通过URL定位要操作的资源，通过HTTP动词(请求方式)来描述具体的操作。
-REST风格的URL中，通过四种请求方式，来操作数据增删改查
-
-GET ：  查询
-POST ：新增
-PUT ：  修改
-DELETE ：删除
-
-
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/01/REST%E9%A3%8E%E6%A0%BC/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-JSON" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/01/JSON/">JSON</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-01T11:46:59.000Z" itemprop="datePublished">2025-08-01</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">通用Web基础</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            378 词 
-          </div>
-        </div>
-        
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              主要是一种简单的用来传输数据的格式，轻量级、易于阅读和编写。特点是都有””包裹的键值对，键和值之间用冒号:分隔，键值对之间用逗号,分隔。
-简单示例
-1234567891011121314&#123;    &quot;name&quot;:&quot;aaa&quot;,    &quot;age&quot;:18,    &quot;isStudent&quot;:true,    &quot;hobbies&quot;:[&quot;reading&quot;,&quot;swimming&quot;],    &quot;address&quot;:&#123;        &quot;street&quot;:&quot;xxx&quot;,         &quot;city&quot;:&quot;yyy&quot;,        &quot;state&quot;:&quot;zzz&quot;        &#125;    &#125;
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/01/JSON/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-HTTP" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/01/HTTP/">HTTP</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-01T11:46:01.000Z" itemprop="datePublished">2025-08-01</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">通用Web基础</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            15 词 
-          </div>
-        </div>
-        
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              懒得写，Http实在太基础了。
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/01/HTTP/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-Ajax" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/01/Ajax/">Ajax</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-01T11:08:54.000Z" itemprop="datePublished">2025-08-01</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">通用Web基础</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            445 词 
-          </div>
-        </div>
-        
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              详细ajax
-什么是ajax
-AJAX&#x3D;Asynchronous JavaScript and XML(异步的JavaScript和XML)。
-AJAX不是新的编程语言，而是一种使用现有标准的新方法。
-AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。
-AJAX不需要任何浏览器插件，但需要用户允许 JavaScript 在浏览器上执行。
-XMLHttpRequest 只是实现 Ajax的一种方式
-
-
-ajax工作原理
-简单来说,我们之前发的请求通过类似 form表单标签,a标签 这种方式,现在通过 运行js代码动态决定什么时候发送什么样的请求
-通过运行JS代码发送的请求浏览器可以不用跳转而面，我们可以在,JS代码中决定是否要跳转而面
-通过运行JS代码发送的请求,接收到返回结果后,我们可以将结果通过dom编程渲染到页面的某些元素上,实现局部更新
-
-同步交互与异步交互
-实现方式
-原生js，很麻烦，					jdbc
-第三方封装好的工具，jquery		baseDAO
-框架 VUE axios					Mybatis
-
-
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/01/Ajax/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
+  <script>
+      new Valine({"enable":true,"appId":"nllUSWQEMs0La7CYajWCfp0g-gzGzoHsz","appKey":"aLiW829Tcl5EMKjuEKj2RAK5","placeholder":"留下你宝贵的留言！","pageSize":10,"highlight":true,"serverURLs":"https://nlluswqe.lc-cn-n1-shared.com","el":"#vcomments"});
+  </script>
 
 
 
