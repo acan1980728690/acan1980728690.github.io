@@ -20,12 +20,12 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="反射入门为什么需要反射？需要根据外部文件配置，在不修改源码的情况下来控制程序，传统方法是无法实现的。 示例12345678910111213141516171819202122232425&#x2F;&#x2F;使用properties读取配置文件&#x2F;&#x2F;3. 使用反射机制解决&#x2F;&#x2F;(1) 加载类, 返回 Class 类型的对象 clsClass cls &#x3D; Class.forName(classfullpath);&#x2F;&#x2F;(">
+  <meta name="description" content="反射入门 为什么需要反射？ 示例   反射机制 介绍 Java反射机制原理示意图 反射机制的作用 反射机制的优点和缺点 反射调用优化-关闭访问检查   class类 基本介绍 Class类常用方法 获取Class对象 哪些类型有Class对象   类加载 基本说明 类加载时机 类加载过程图 类加载各阶段完成任务 加载阶段 连接阶段 验证阶段 准备阶段 解析阶段   初始化阶段     反射获取类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="反射">
 <meta property="og:url" content="http://example.com/2025/08/02/JavaSE/JavaSE%E8%BF%9B%E9%98%B6/%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="acan的博客">
-<meta property="og:description" content="反射入门为什么需要反射？需要根据外部文件配置，在不修改源码的情况下来控制程序，传统方法是无法实现的。 示例12345678910111213141516171819202122232425&#x2F;&#x2F;使用properties读取配置文件&#x2F;&#x2F;3. 使用反射机制解决&#x2F;&#x2F;(1) 加载类, 返回 Class 类型的对象 clsClass cls &#x3D; Class.forName(classfullpath);&#x2F;&#x2F;(">
+<meta property="og:description" content="反射入门 为什么需要反射？ 示例   反射机制 介绍 Java反射机制原理示意图 反射机制的作用 反射机制的优点和缺点 反射调用优化-关闭访问检查   class类 基本介绍 Class类常用方法 获取Class对象 哪些类型有Class对象   类加载 基本说明 类加载时机 类加载过程图 类加载各阶段完成任务 加载阶段 连接阶段 验证阶段 准备阶段 解析阶段   初始化阶段     反射获取类">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2025/08/02/JavaSE/JavaSE%E8%BF%9B%E9%98%B6/%E5%8F%8D%E5%B0%84/20250802140515.png">
 <meta property="og:image" content="http://example.com/2025/08/02/JavaSE/JavaSE%E8%BF%9B%E9%98%B6/%E5%8F%8D%E5%B0%84/20250802142507.png">
@@ -166,6 +166,31 @@
                 面向对象
                 <div class="category-count">3</div>
             </a>
+        </div></div></div></div>
+            <a class="category-link" href="/categories/java/">
+                java
+                <div class="category-count">7</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/java/Web/">
+                Web
+                <div class="category-count">5</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/java/Web/%E5%90%8E%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+                后端基础
+                <div class="category-count">5</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/java/web/">
+                web
+                <div class="category-count">2</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/java/web/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                数据库
+                <div class="category-count">2</div>
+            </a>
         </div></div></div></div></div>
     </div>
   </div>
@@ -176,7 +201,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">标签</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/ArrayList/" rel="tag">ArrayList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Arrays%E7%B1%BB/" rel="tag">Arrays类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/BigDecimal%E7%B1%BB%E5%92%8CBigInteger%E7%B1%BB/" rel="tag">BigDecimal类和BigInteger类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Collections/" rel="tag">Collections</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Date%E7%B1%BB/" rel="tag">Date类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashSet/" rel="tag">HashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashTable/" rel="tag">HashTable</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedHashSet/" rel="tag">LinkedHashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Math%E7%B1%BB/" rel="tag">Math类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Properties/" rel="tag">Properties</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuffer%E7%B1%BB/" rel="tag">StringBuffer类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuilder%E7%B1%BB/" rel="tag">StringBuilder类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/String%E7%B1%BB/" rel="tag">String类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/System%E7%B1%BB/" rel="tag">System类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeMap/" rel="tag">TreeMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeSet/" rel="tag">TreeSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Vector/" rel="tag">Vector</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/final%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">final关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/static/" rel="tag">static</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/this%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">this关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/" rel="tag">代码块</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag">作用域</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%86%85%E9%83%A8%E7%B1%BB/" rel="tag">内部类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85/" rel="tag">包</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85%E8%A3%85%E7%B1%BB/" rel="tag">包装类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%8D%E5%B0%84/" rel="tag">反射</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/" rel="tag">可变参数</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90/" rel="tag">对象创建的流程分析</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" rel="tag">抽象类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8E%A5%E5%8F%A3/" rel="tag">接口</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/" rel="tag">方法的重载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%99%A8/" rel="tag">构造器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%90%86%E8%A7%A3main/" rel="tag">理解main</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%B1%BB%E5%8A%A0%E8%BD%BD/" rel="tag">类加载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/" rel="tag">访问修饰符</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%86%E5%90%88/" rel="tag">集合</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" rel="tag">面向对象三大特征</a></li></ul>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/ArrayList/" rel="tag">ArrayList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Arrays%E7%B1%BB/" rel="tag">Arrays类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/BigDecimal%E7%B1%BB%E5%92%8CBigInteger%E7%B1%BB/" rel="tag">BigDecimal类和BigInteger类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Collections/" rel="tag">Collections</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Date%E7%B1%BB/" rel="tag">Date类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashSet/" rel="tag">HashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashTable/" rel="tag">HashTable</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedHashSet/" rel="tag">LinkedHashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Math%E7%B1%BB/" rel="tag">Math类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Properties/" rel="tag">Properties</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuffer%E7%B1%BB/" rel="tag">StringBuffer类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuilder%E7%B1%BB/" rel="tag">StringBuilder类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/String%E7%B1%BB/" rel="tag">String类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/System%E7%B1%BB/" rel="tag">System类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeMap/" rel="tag">TreeMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeSet/" rel="tag">TreeSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Vector/" rel="tag">Vector</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/final%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">final关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/static/" rel="tag">static</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/this%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">this关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/" rel="tag">代码块</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag">作用域</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%86%85%E9%83%A8%E7%B1%BB/" rel="tag">内部类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85/" rel="tag">包</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85%E8%A3%85%E7%B1%BB/" rel="tag">包装类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%8D%E5%B0%84/" rel="tag">反射</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/" rel="tag">可变参数</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90/" rel="tag">对象创建的流程分析</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" rel="tag">抽象类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8E%A5%E5%8F%A3/" rel="tag">接口</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/" rel="tag">方法的重载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%99%A8/" rel="tag">构造器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%90%86%E8%A7%A3main/" rel="tag">理解main</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%B1%BB%E5%8A%A0%E8%BD%BD/" rel="tag">类加载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/" rel="tag">访问修饰符</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%86%E5%90%88/" rel="tag">集合</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" rel="tag">面向对象三大特征</a></li></ul>
     </div>
   </div>
 
@@ -221,7 +246,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            9k 词 
+            9.3k 词 
           </div>
         </div>
         
@@ -230,7 +255,62 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <h2 id="反射入门"><a href="#反射入门" class="headerlink" title="反射入门"></a>反射入门</h2><h3 id="为什么需要反射？"><a href="#为什么需要反射？" class="headerlink" title="为什么需要反射？"></a>为什么需要反射？</h3><p>需要根据外部文件配置，在不修改源码的情况下来控制程序，传统方法是无法实现的。</p>
+          <ul>
+<li><a href="#%E5%8F%8D%E5%B0%84%E5%85%A5%E9%97%A8">反射入门</a><ul>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%8F%8D%E5%B0%84">为什么需要反射？</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B">示例</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6">反射机制</a><ul>
+<li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li>
+<li><a href="#java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%8E%9F%E7%90%86%E7%A4%BA%E6%84%8F%E5%9B%BE">Java反射机制原理示意图</a></li>
+<li><a href="#%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E7%9A%84%E4%BD%9C%E7%94%A8">反射机制的作用</a></li>
+<li><a href="#%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9">反射机制的优点和缺点</a></li>
+<li><a href="#%E5%8F%8D%E5%B0%84%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96-%E5%85%B3%E9%97%AD%E8%AE%BF%E9%97%AE%E6%A3%80%E6%9F%A5">反射调用优化-关闭访问检查</a></li>
+</ul>
+</li>
+<li><a href="#class%E7%B1%BB">class类</a><ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D">基本介绍</a></li>
+<li><a href="#class%E7%B1%BB%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95">Class类常用方法</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96class%E5%AF%B9%E8%B1%A1">获取Class对象</a></li>
+<li><a href="#%E5%93%AA%E4%BA%9B%E7%B1%BB%E5%9E%8B%E6%9C%89class%E5%AF%B9%E8%B1%A1">哪些类型有Class对象</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD">类加载</a><ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E8%AF%B4%E6%98%8E">基本说明</a></li>
+<li><a href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%97%B6%E6%9C%BA">类加载时机</a></li>
+<li><a href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E5%9B%BE">类加载过程图</a></li>
+<li><a href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%90%84%E9%98%B6%E6%AE%B5%E5%AE%8C%E6%88%90%E4%BB%BB%E5%8A%A1">类加载各阶段完成任务</a><ul>
+<li><a href="#%E5%8A%A0%E8%BD%BD%E9%98%B6%E6%AE%B5">加载阶段</a></li>
+<li><a href="#%E8%BF%9E%E6%8E%A5%E9%98%B6%E6%AE%B5">连接阶段</a><ul>
+<li><a href="#%E9%AA%8C%E8%AF%81%E9%98%B6%E6%AE%B5">验证阶段</a></li>
+<li><a href="#%E5%87%86%E5%A4%87%E9%98%B6%E6%AE%B5">准备阶段</a></li>
+<li><a href="#%E8%A7%A3%E6%9E%90%E9%98%B6%E6%AE%B5">解析阶段</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%98%B6%E6%AE%B5">初始化阶段</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%BF%A1%E6%81%AF">反射获取类的结构信息</a><br>- <a href="#%E7%AC%AC%E4%B8%80%E7%BB%84javalangclass%E7%B1%BB%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95">第一组：java.lang.Class类中的方法</a><br>- <a href="#%E7%AC%AC%E4%BA%8C%E7%BB%84javalangreflectfield%E7%B1%BB%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95">第二组：java.lang.reflect.Field类中的方法</a><br>- <a href="#%E7%AC%AC%E4%B8%89%E7%BB%84javalangreflectmethod%E7%B1%BB%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95">第三组：java.lang.reflect.Method类中的方法</a><ul>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E7%BB%84-javalangreflectconstructor%E7%B1%BB%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95">第四组 ：java.lang.reflect.Constructor类中的方法</a></li>
+</ul>
+</li>
+<li><a href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1">通过反射创建对象</a><ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B-1">示例</a></li>
+</ul>
+</li>
+<li><a href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E8%AE%BF%E9%97%AE%E7%B1%BB%E4%B8%AD%E7%9A%84%E6%88%90%E5%91%98">通过反射访问类中的成员</a><ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B-2">示例</a></li>
+</ul>
+</li>
+<li><a href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E8%B0%83%E7%94%A8%E7%B1%BB%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95">通过反射调用类中的方法</a><ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B-3">示例</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="反射入门"><a href="#反射入门" class="headerlink" title="反射入门"></a>反射入门</h2><h3 id="为什么需要反射？"><a href="#为什么需要反射？" class="headerlink" title="为什么需要反射？"></a>为什么需要反射？</h3><p>需要根据外部文件配置，在不修改源码的情况下来控制程序，传统方法是无法实现的。</p>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用properties读取配置文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3. 使用反射机制解决</span></span><br><span class="line"><span class="comment">//(1) 加载类, 返回 Class 类型的对象 cls</span></span><br><span class="line"><span class="type">Class</span> <span class="variable">cls</span> <span class="operator">=</span> Class.forName(classfullpath);</span><br><span class="line"><span class="comment">//(2) 通过 cls 得到你加载的类 com.hspedu.Cat 的对象实例</span></span><br><span class="line"><span class="type">Object</span> <span class="variable">o</span> <span class="operator">=</span> cls.newInstance();</span><br><span class="line">System.out.println(<span class="string">&quot;o 的运行类型=&quot;</span> + o.getClass()); <span class="comment">//运行类型</span></span><br><span class="line"><span class="comment">//(3) 通过 cls 得到你加载的类 com.hspedu.Cat 的 methodName&quot;hi&quot; 的方法对象</span></span><br><span class="line"><span class="comment">// 即：在反射中，可以把方法视为对象（万物皆对象）</span></span><br><span class="line"><span class="type">Method</span> <span class="variable">method1</span> <span class="operator">=</span> cls.getMethod(methodName);</span><br><span class="line"><span class="comment">//(4) 通过 method1 调用方法: 即通过方法对象来实现调用方法</span></span><br><span class="line">System.out.println(<span class="string">&quot;=============================&quot;</span>);</span><br><span class="line">method1.invoke(o); <span class="comment">//传统方法 对象.方法() , 反射机制 方法.invoke(对象)</span></span><br><span class="line"><span class="comment">//java.lang.reflect.Field: 代表类的成员变量, Field 对象表示某个类的成员变量</span></span><br><span class="line"><span class="comment">//得到 name 字段</span></span><br><span class="line"><span class="comment">//getField 不能得到私有的属性</span></span><br><span class="line"><span class="type">Field</span> <span class="variable">nameField</span> <span class="operator">=</span> cls.getField(<span class="string">&quot;age&quot;</span>); <span class="comment">//</span></span><br><span class="line">System.out.println(nameField.get(o)); <span class="comment">// 传统写法 对象.成员变量 , 反射 : 成员变量对象.get(对象)</span></span><br><span class="line"><span class="comment">//java.lang.reflect.Constructor: 代表类的构造方法, Constructor 对象表示构造器</span></span><br><span class="line"><span class="type">Constructor</span> <span class="variable">constructor</span> <span class="operator">=</span> cls.getConstructor(); <span class="comment">//()中可以指定构造器参数类型, 返回无参构造器</span></span><br><span class="line">System.out.println(constructor);<span class="comment">//Cat()</span></span><br><span class="line"><span class="type">Constructor</span> <span class="variable">constructor2</span> <span class="operator">=</span> cls.getConstructor(String.class); <span class="comment">//这里老师传入的 String.class 就是 String 类的</span></span><br><span class="line">Class 对象</span><br><span class="line">System.out.println(constructor2);<span class="comment">//Cat(String name)</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="反射机制"><a href="#反射机制" class="headerlink" title="反射机制"></a>反射机制</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ol>
@@ -439,10 +519,15 @@
   
     
 <nav id="article-nav">
-  <a class="article-nav-btn left  disabled "
+  <a class="article-nav-btn left "
+    
+      href="/2025/08/02/JavaWeb/%E5%90%8E%E7%AB%AFweb%E5%9F%BA%E7%A1%80/Tomcat/"
+      title="Tomcat"
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
+      
+        Tomcat
         
     </p>
   </a>

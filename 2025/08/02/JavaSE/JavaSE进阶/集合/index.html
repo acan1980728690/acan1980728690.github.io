@@ -20,12 +20,12 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="体系集合主要分为两种，单列集合和双列集合 Collection接口有两个重要的子接口，一个是list，一个是set，他们的实现都是单列集合 Map接口的实现子类是双列集合，存放的K-V Collection接口List接口ArrayList介绍 允许所有的元素，包括null，ArrayList可以加入null，而且可以多个 ArrayList是由数组来实现数据存储的 ArrayList基本等同于V">
+  <meta name="description" content="体系 Collection接口 List接口 ArrayList   介绍 底层 LinkedList 介绍 底层 常用方法   Vector   Set接口 HashSet 介绍 底层机制   LinkedHashSet 介绍 底层机制   TreeSet     Map接口 HashMap 介绍 底层 底层扩容机制 k-v     HashTable 介绍 底层   Properties 基">
 <meta property="og:type" content="article">
 <meta property="og:title" content="集合">
 <meta property="og:url" content="http://example.com/2025/08/02/JavaSE/JavaSE%E8%BF%9B%E9%98%B6/%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="acan的博客">
-<meta property="og:description" content="体系集合主要分为两种，单列集合和双列集合 Collection接口有两个重要的子接口，一个是list，一个是set，他们的实现都是单列集合 Map接口的实现子类是双列集合，存放的K-V Collection接口List接口ArrayList介绍 允许所有的元素，包括null，ArrayList可以加入null，而且可以多个 ArrayList是由数组来实现数据存储的 ArrayList基本等同于V">
+<meta property="og:description" content="体系 Collection接口 List接口 ArrayList   介绍 底层 LinkedList 介绍 底层 常用方法   Vector   Set接口 HashSet 介绍 底层机制   LinkedHashSet 介绍 底层机制   TreeSet     Map接口 HashMap 介绍 底层 底层扩容机制 k-v     HashTable 介绍 底层   Properties 基">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2025/08/02/JavaSE/JavaSE%E8%BF%9B%E9%98%B6/%E9%9B%86%E5%90%88/20250802102042.png">
 <meta property="og:image" content="http://example.com/2025/08/02/JavaSE/JavaSE%E8%BF%9B%E9%98%B6/%E9%9B%86%E5%90%88/20250802102051.png">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://example.com/2025/08/02/JavaSE/JavaSE%E8%BF%9B%E9%98%B6/%E9%9B%86%E5%90%88/20250802102312.png">
 <meta property="og:image" content="http://example.com/2025/08/02/JavaSE/JavaSE%E8%BF%9B%E9%98%B6/%E9%9B%86%E5%90%88/20250802102328.png">
 <meta property="article:published_time" content="2025-08-02T02:14:29.000Z">
-<meta property="article:modified_time" content="2025-08-02T02:25:16.354Z">
+<meta property="article:modified_time" content="2025-08-02T11:34:06.409Z">
 <meta property="article:author" content="acan">
 <meta property="article:tag" content="集合">
 <meta property="article:tag" content="ArrayList">
@@ -177,6 +177,31 @@
                 面向对象
                 <div class="category-count">3</div>
             </a>
+        </div></div></div></div>
+            <a class="category-link" href="/categories/java/">
+                java
+                <div class="category-count">7</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/java/Web/">
+                Web
+                <div class="category-count">5</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/java/Web/%E5%90%8E%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+                后端基础
+                <div class="category-count">5</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/java/web/">
+                web
+                <div class="category-count">2</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/java/web/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                数据库
+                <div class="category-count">2</div>
+            </a>
         </div></div></div></div></div>
     </div>
   </div>
@@ -187,7 +212,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">标签</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/ArrayList/" rel="tag">ArrayList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Arrays%E7%B1%BB/" rel="tag">Arrays类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/BigDecimal%E7%B1%BB%E5%92%8CBigInteger%E7%B1%BB/" rel="tag">BigDecimal类和BigInteger类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Collections/" rel="tag">Collections</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Date%E7%B1%BB/" rel="tag">Date类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashSet/" rel="tag">HashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashTable/" rel="tag">HashTable</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedHashSet/" rel="tag">LinkedHashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Math%E7%B1%BB/" rel="tag">Math类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Properties/" rel="tag">Properties</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuffer%E7%B1%BB/" rel="tag">StringBuffer类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuilder%E7%B1%BB/" rel="tag">StringBuilder类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/String%E7%B1%BB/" rel="tag">String类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/System%E7%B1%BB/" rel="tag">System类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeMap/" rel="tag">TreeMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeSet/" rel="tag">TreeSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Vector/" rel="tag">Vector</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/final%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">final关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/static/" rel="tag">static</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/this%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">this关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/" rel="tag">代码块</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag">作用域</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%86%85%E9%83%A8%E7%B1%BB/" rel="tag">内部类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85/" rel="tag">包</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85%E8%A3%85%E7%B1%BB/" rel="tag">包装类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%8D%E5%B0%84/" rel="tag">反射</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/" rel="tag">可变参数</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90/" rel="tag">对象创建的流程分析</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" rel="tag">抽象类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8E%A5%E5%8F%A3/" rel="tag">接口</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/" rel="tag">方法的重载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%99%A8/" rel="tag">构造器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%90%86%E8%A7%A3main/" rel="tag">理解main</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%B1%BB%E5%8A%A0%E8%BD%BD/" rel="tag">类加载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/" rel="tag">访问修饰符</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%86%E5%90%88/" rel="tag">集合</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" rel="tag">面向对象三大特征</a></li></ul>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/ArrayList/" rel="tag">ArrayList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Arrays%E7%B1%BB/" rel="tag">Arrays类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/BigDecimal%E7%B1%BB%E5%92%8CBigInteger%E7%B1%BB/" rel="tag">BigDecimal类和BigInteger类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Collections/" rel="tag">Collections</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Date%E7%B1%BB/" rel="tag">Date类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashSet/" rel="tag">HashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashTable/" rel="tag">HashTable</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedHashSet/" rel="tag">LinkedHashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Math%E7%B1%BB/" rel="tag">Math类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Mysql/" rel="tag">Mysql</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Properties/" rel="tag">Properties</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuffer%E7%B1%BB/" rel="tag">StringBuffer类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuilder%E7%B1%BB/" rel="tag">StringBuilder类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/String%E7%B1%BB/" rel="tag">String类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/System%E7%B1%BB/" rel="tag">System类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeMap/" rel="tag">TreeMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeSet/" rel="tag">TreeSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Vector/" rel="tag">Vector</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/final%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">final关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/static/" rel="tag">static</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/this%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">this关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/" rel="tag">代码块</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag">作用域</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%86%85%E9%83%A8%E7%B1%BB/" rel="tag">内部类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85/" rel="tag">包</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85%E8%A3%85%E7%B1%BB/" rel="tag">包装类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%8D%E5%B0%84/" rel="tag">反射</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/" rel="tag">可变参数</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90/" rel="tag">对象创建的流程分析</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" rel="tag">抽象类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8E%A5%E5%8F%A3/" rel="tag">接口</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/" rel="tag">方法的重载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%99%A8/" rel="tag">构造器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%90%86%E8%A7%A3main/" rel="tag">理解main</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%B1%BB%E5%8A%A0%E8%BD%BD/" rel="tag">类加载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/" rel="tag">访问修饰符</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%86%E5%90%88/" rel="tag">集合</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" rel="tag">面向对象三大特征</a></li></ul>
     </div>
   </div>
 
@@ -232,7 +257,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            3.8k 词 
+            4k 词 
           </div>
         </div>
         
@@ -241,7 +266,70 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <h2 id="体系"><a href="#体系" class="headerlink" title="体系"></a>体系</h2><p>集合主要分为两种，单列集合和双列集合</p>
+          <ul>
+<li><a href="#%E4%BD%93%E7%B3%BB">体系</a></li>
+<li><a href="#collection%E6%8E%A5%E5%8F%A3">Collection接口</a><ul>
+<li><a href="#list%E6%8E%A5%E5%8F%A3">List接口</a><ul>
+<li><a href="#arraylist">ArrayList</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li>
+<li><a href="#%E5%BA%95%E5%B1%82">底层</a><ul>
+<li><a href="#linkedlist">LinkedList</a><ul>
+<li><a href="#%E4%BB%8B%E7%BB%8D-1">介绍</a></li>
+<li><a href="#%E5%BA%95%E5%B1%82-1">底层</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95">常用方法</a></li>
+</ul>
+</li>
+<li><a href="#vector">Vector</a></li>
+</ul>
+</li>
+<li><a href="#set%E6%8E%A5%E5%8F%A3">Set接口</a><ul>
+<li><a href="#hashset">HashSet</a><ul>
+<li><a href="#%E4%BB%8B%E7%BB%8D-2">介绍</a></li>
+<li><a href="#%E5%BA%95%E5%B1%82%E6%9C%BA%E5%88%B6">底层机制</a></li>
+</ul>
+</li>
+<li><a href="#linkedhashset">LinkedHashSet</a><ul>
+<li><a href="#%E4%BB%8B%E7%BB%8D-3">介绍</a></li>
+<li><a href="#%E5%BA%95%E5%B1%82%E6%9C%BA%E5%88%B6-1">底层机制</a></li>
+</ul>
+</li>
+<li><a href="#treeset">TreeSet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#map%E6%8E%A5%E5%8F%A3">Map接口</a><ul>
+<li><a href="#hashmap">HashMap</a><ul>
+<li><a href="#%E4%BB%8B%E7%BB%8D-4">介绍</a></li>
+<li><a href="#%E5%BA%95%E5%B1%82-2">底层</a><ul>
+<li><a href="#%E5%BA%95%E5%B1%82%E6%89%A9%E5%AE%B9%E6%9C%BA%E5%88%B6">底层扩容机制</a></li>
+<li><a href="#k-v">k-v</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#hashtable">HashTable</a><ul>
+<li><a href="#%E4%BB%8B%E7%BB%8D-5">介绍</a></li>
+<li><a href="#%E5%BA%95%E5%B1%82-3">底层</a></li>
+</ul>
+</li>
+<li><a href="#properties">Properties</a><ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D">基本介绍</a></li>
+<li><a href="#%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95">常见方法</a></li>
+</ul>
+</li>
+<li><a href="#treemap">TreeMap</a></li>
+</ul>
+</li>
+<li><a href="#collections%E5%B7%A5%E5%85%B7%E7%B1%BB">Collections工具类</a><ul>
+<li><a href="#%E6%8E%92%E5%BA%8F%E6%93%8D%E4%BD%9C">排序操作</a></li>
+<li><a href="#%E6%9F%A5%E6%89%BE%E6%9B%BF%E6%8D%A2">查找，替换</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="体系"><a href="#体系" class="headerlink" title="体系"></a>体系</h2><p>集合主要分为两种，单列集合和双列集合</p>
 <p>Collection接口有两个重要的子接口，一个是list，一个是set，他们的实现都是单列集合</p>
 <p>Map接口的实现子类是双列集合，存放的K-V</p>
 <h2 id="Collection接口"><a href="#Collection接口" class="headerlink" title="Collection接口"></a>Collection接口</h2><h3 id="List接口"><a href="#List接口" class="headerlink" title="List接口"></a>List接口</h3><h4 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h4><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><ul>
