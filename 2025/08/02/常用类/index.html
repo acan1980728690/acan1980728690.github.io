@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="false" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>常用类 | acan的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="包装类包装类的分类针对八种数据类型相应的引用类型——包装类 有了类的特点，就可以调用类中的方法 包装类和基本数据的转换（装箱和拆箱）装箱：基本数据类型-&gt;包装类型，拆箱就是反过来 jdk5以前为手动装箱和拆箱，之后为自动装箱和拆箱 自动装箱底层调用的是valueOf方法，比如Interger.valueOf() 一些常用方法 Interger.MIN_VALUE返回最小值 Interger.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用类">
+<meta property="og:url" content="http://example.com/2025/08/02/%E5%B8%B8%E7%94%A8%E7%B1%BB/index.html">
+<meta property="og:site_name" content="acan的博客">
+<meta property="og:description" content="包装类包装类的分类针对八种数据类型相应的引用类型——包装类 有了类的特点，就可以调用类中的方法 包装类和基本数据的转换（装箱和拆箱）装箱：基本数据类型-&gt;包装类型，拆箱就是反过来 jdk5以前为手动装箱和拆箱，之后为自动装箱和拆箱 自动装箱底层调用的是valueOf方法，比如Interger.valueOf() 一些常用方法 Interger.MIN_VALUE返回最小值 Interger.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2025/08/02/%E5%B8%B8%E7%94%A8%E7%B1%BB/20250802100541.png">
+<meta property="og:image" content="http://example.com/2025/08/02/%E5%B8%B8%E7%94%A8%E7%B1%BB/20250802100550.png">
+<meta property="article:published_time" content="2025-08-02T02:01:00.000Z">
+<meta property="article:modified_time" content="2025-08-02T02:26:24.769Z">
+<meta property="article:author" content="acan">
+<meta property="article:tag" content="包装类">
+<meta property="article:tag" content="String类">
+<meta property="article:tag" content="StringBuffer类">
+<meta property="article:tag" content="StringBuilder类">
+<meta property="article:tag" content="Math类">
+<meta property="article:tag" content="Arrays类">
+<meta property="article:tag" content="System类">
+<meta property="article:tag" content="BigDecimal类和BigInteger类">
+<meta property="article:tag" content="Date类">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2025/08/02/%E5%B8%B8%E7%94%A8%E7%B1%BB/20250802100541.png">
+  
+    <link rel="alternate" href="/atom.xml" title="acan的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/avatar.jpg">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>acan的博客 </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS 订阅">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/images/avatar.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">acan </div>
+      <div class="dot"></div>
+      <div class="subtitle">这是acan的个人博客，记录我的学习生活，希望能对你有用 </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/acan1980728690?tab=repositories" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">
+                通用Web基础
+                <div class="category-count">5</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Java/">
+                Java
+                <div class="category-count">11</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/">
+                基础
+                <div class="category-count">11</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                面向对象
+                <div class="category-count">3</div>
+            </a>
+        </div></div></div></div></div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/ArrayList/" rel="tag">ArrayList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Arrays%E7%B1%BB/" rel="tag">Arrays类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/BigDecimal%E7%B1%BB%E5%92%8CBigInteger%E7%B1%BB/" rel="tag">BigDecimal类和BigInteger类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Collections/" rel="tag">Collections</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Date%E7%B1%BB/" rel="tag">Date类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashSet/" rel="tag">HashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashTable/" rel="tag">HashTable</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedHashSet/" rel="tag">LinkedHashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Math%E7%B1%BB/" rel="tag">Math类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Properties/" rel="tag">Properties</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuffer%E7%B1%BB/" rel="tag">StringBuffer类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuilder%E7%B1%BB/" rel="tag">StringBuilder类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/String%E7%B1%BB/" rel="tag">String类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/System%E7%B1%BB/" rel="tag">System类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeMap/" rel="tag">TreeMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeSet/" rel="tag">TreeSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Vector/" rel="tag">Vector</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/final%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">final关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/static/" rel="tag">static</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/this%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">this关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/" rel="tag">代码块</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag">作用域</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%86%85%E9%83%A8%E7%B1%BB/" rel="tag">内部类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85/" rel="tag">包</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85%E8%A3%85%E7%B1%BB/" rel="tag">包装类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/" rel="tag">可变参数</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90/" rel="tag">对象创建的流程分析</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" rel="tag">抽象类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8E%A5%E5%8F%A3/" rel="tag">接口</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/" rel="tag">方法的重载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%99%A8/" rel="tag">构造器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%90%86%E8%A7%A3main/" rel="tag">理解main</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/" rel="tag">访问修饰符</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%86%E5%90%88/" rel="tag">集合</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" rel="tag">面向对象三大特征</a></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="post-常用类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        常用类
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-02T02:01:00.000Z" itemprop="datePublished">2025-08-02</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Java/">Java</a>><a class="meta-cate-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/">基础</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            3.1k 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arrays%E7%B1%BB/" rel="tag">Arrays类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BigDecimal%E7%B1%BB%E5%92%8CBigInteger%E7%B1%BB/" rel="tag">BigDecimal类和BigInteger类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Date%E7%B1%BB/" rel="tag">Date类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math%E7%B1%BB/" rel="tag">Math类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/StringBuffer%E7%B1%BB/" rel="tag">StringBuffer类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/StringBuilder%E7%B1%BB/" rel="tag">StringBuilder类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String%E7%B1%BB/" rel="tag">String类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/System%E7%B1%BB/" rel="tag">System类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8C%85%E8%A3%85%E7%B1%BB/" rel="tag">包装类</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h2 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h2><h3 id="包装类的分类"><a href="#包装类的分类" class="headerlink" title="包装类的分类"></a>包装类的分类</h3><p>针对八种数据类型相应的引用类型——包装类</p>
+<p>有了类的特点，就可以调用类中的方法</p>
+<h2 id="包装类和基本数据的转换（装箱和拆箱）"><a href="#包装类和基本数据的转换（装箱和拆箱）" class="headerlink" title="包装类和基本数据的转换（装箱和拆箱）"></a>包装类和基本数据的转换（装箱和拆箱）</h2><p>装箱：基本数据类型-&gt;包装类型，拆箱就是反过来</p>
+<p>jdk5以前为手动装箱和拆箱，之后为自动装箱和拆箱</p>
+<p>自动装箱底层调用的是valueOf方法，比如Interger.valueOf()</p>
+<h3 id="一些常用方法"><a href="#一些常用方法" class="headerlink" title="一些常用方法"></a>一些常用方法</h3><ul>
+<li>Interger.MIN_VALUE返回最小值</li>
+<li>Interger.MAX_VALUE返回最大值</li>
+<li>Character.isDigit()判断是不是数字</li>
+<li>Character.isLetter()判断是不是字母</li>
+<li>Character.isUpperCase()判断是不是大写</li>
+<li>Character.isLowerCase()判断是不是小写</li>
+<li>Character.isWhiteSpace()判断是不是空格</li>
+<li>Character.toUpperCase()转成大写</li>
+<li>Character.toLowerCase()转成小写</li>
+</ul>
+<h3 id="面试题，底层"><a href="#面试题，底层" class="headerlink" title="面试题，底层"></a>面试题，底层</h3><p>Integer底层创建机制</p>
+<p>-128 - 127的时候是直接返回同一个对象的引用，类似String，超出这个范围是新建一个对象</p>
+<h2 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>String对象用于保存字符串，也就是一组字符序列</p>
+<p>字符串常量对象是用双引号括起的字符序列，比如“你好”</p>
+<p>字符串的字符使用Unicode字符编码，一个字符（不区分字母还是汉字）占两个字节</p>
+<p>String实现的接口</p>
+<ul>
+<li>Serializable(String 可以串行化：可以在网络传输)</li>
+<li>Compareable(String对象可以比较大小)</li>
+</ul>
+<p>String 是final类，不能继承</p>
+<p>String 有属性 private final char value[];用于存放字符串内容</p>
+<p>一定要注意：value是一个final类型，不可以修改（不可以修改指针本身，可以修改指针所指向的值）</p>
+<h3 id="创建String对象的两种方式"><a href="#创建String对象的两种方式" class="headerlink" title="创建String对象的两种方式"></a>创建String对象的两种方式</h3><p>String s &#x3D; “a”（直接赋值）</p>
+<ul>
+<li>先从常量池查看是否有a数据空间，如果有则直接指向a，如果没有则重新创建，然后指向，s最终指向的是常量池的空间地址<br><img src="/2025/08/02/%E5%B8%B8%E7%94%A8%E7%B1%BB/20250802100541.png"></li>
+</ul>
+<p>String s2 &#x3D; new String(“a”)</p>
+<ul>
+<li>先在堆中创建空间，里面维护了value属性，指向常量池的a空间，如果有，直接通过value指向，没有则重新创建然后指向。最后指向的是堆中的空间地址<br><img src="/2025/08/02/%E5%B8%B8%E7%94%A8%E7%B1%BB/20250802100550.png"></li>
+</ul>
+<h3 id="底层-的优化"><a href="#底层-的优化" class="headerlink" title="底层+的优化"></a>底层+的优化</h3><p>&#x2F;&#x2F;此处为jdk8，jdk9之后优化方式不同，但逻辑上是差不多的</p>
+<ol>
+<li>先创建一个StringBuilder对象(sb)</li>
+<li>sb.append(a)</li>
+<li>sb.append(b)</li>
+<li>return sb.toString</li>
+</ol>
+<ul>
+<li><p>例题</p>
+<p>  <code>String a = &quot;hello&quot; + &quot;abc&quot;;</code>&#x2F;&#x2F;底层会直接拼好，只有一个对象</p>
+<p>  &#x2F;&#x2F;如果是两个对象相加那么就是三个对象</p>
+</li>
+</ul>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><p>length()：返回字符串的长度</p>
+<p>charAt(int index)：返回字符串指定索引位置的字符</p>
+<p>substring(int beginIndex, int endIndex)：返回字符串指定索引范围的子串</p>
+<p>toUpperCase()：将字符串转换为大写。</p>
+<p>toLowerCase()：将字符串转换为小写</p>
+<p>trim()：去除字符串两端的空格</p>
+<p>replace(char oldChar, char newChar)：将字符串中所有的旧字符替换为新字符</p>
+<p>split(String regex)：将字符串按指定的正则表达式分割成字符串数组</p>
+<h2 id="StringBuffer类"><a href="#StringBuffer类" class="headerlink" title="StringBuffer类"></a>StringBuffer类</h2><h3 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h3><ul>
+<li>StringBuffer代表可变的字符序列，可以对字符串内容进行增删，很多方法和String一样，但是StringBuffer是可变长度的</li>
+<li>StringBuffer的直接父类是AbstractStringBuilder</li>
+<li>StringBuffer实现了Serializable，即StringBuffer的对象可以串行化</li>
+<li>在父类中AbstractStringBuilder有属性char[] value,不是final </li>
+<li>StringBuffer是一个final类，不能被继承</li>
+<li>因为StringBuffer字符内容是存在char[] value,所以值是可以变化的，不用和String一样每次都更换地址（即不是每次都创建新对象）</li>
+</ul>
+<h3 id="String-vs-StringBuffer"><a href="#String-vs-StringBuffer" class="headerlink" title="String vs StringBuffer"></a>String vs StringBuffer</h3><ul>
+<li>String保存的是字符串常量，里面的值不能更改，每次String类的更新实际上是更改地址，效率较低</li>
+<li>StringBuffer保存的是字符串变量，里面的值可以更改，每次StringBuffer的更新实际上可以更新内容，不用每次更新地址，效率较高</li>
+</ul>
+<h3 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h3><ul>
+<li>():创建一个大小为16的char[],用于存放字符内容</li>
+<li>(int capacity)：通过构造器指定char[]大小</li>
+<li>(String str):给一个String创建StringBuffer,char[]大小就是str.length() + 16</li>
+</ul>
+<h3 id="常用方法-1"><a href="#常用方法-1" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
+<li>增append</li>
+<li>删delete</li>
+<li>改replace</li>
+<li>查IndexOf</li>
+<li>插insert</li>
+<li>获取长度length</li>
+</ul>
+<h2 id="StringBuilder类"><a href="#StringBuilder类" class="headerlink" title="StringBuilder类"></a>StringBuilder类</h2><ul>
+<li>String:不可变字符序列，效率低但是复用率高</li>
+<li>StringBuffer:可变字符序列，效率较高（增删），线程安全</li>
+<li>StringBuilder:可变字符序列，效率最高，线程不安全</li>
+<li>StringBuffer和StringBuilder非常类似，均代表可变的字符序列，而且方法也一样</li>
+<li>区别：StringBuilder是非线程安全的，效率比StringBuffer高，但是StringBuilder的对象可以被多个线程共享，而StringBuffer对象是非线程安全的，每次只能被一个线程使用</li>
+</ul>
+<h2 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h2><h3 id="常用方法-2"><a href="#常用方法-2" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
+<li>abs(a)求绝对值</li>
+<li>pow(a,b)求幂(a的b次方)</li>
+<li>ceil(a)向上取整</li>
+<li>floor(a)向下取整</li>
+<li>round(a)四舍五入</li>
+<li>sqrt(a)求开方</li>
+<li>random()求随机数(0-1)</li>
+<li>max(a,b)求两个数之间的最大值</li>
+<li>min(a,b)求两个数的最小值</li>
+</ul>
+<h2 id="Arrays类"><a href="#Arrays类" class="headerlink" title="Arrays类"></a>Arrays类</h2><h3 id="常用方法-3"><a href="#常用方法-3" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
+<li>toString 返回数组的字符串形式</li>
+<li>sort排序（可以使用自定义的排序方法）</li>
+<li>binarySearch通过二分搜索法进行查找，要求必须排好序（）</li>
+<li>copyOf数组元素的复制（可以改拷贝的长度）</li>
+<li>fill数组元素的填充（使用该内容填充所有元素，相当于把所有元素都换成该内容）</li>
+<li>equals判断数组元素内容是否完全一致</li>
+<li>asList将一组值，转换为list</li>
+</ul>
+<h2 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h2><ul>
+<li>exit退出当前程序</li>
+<li>arraycopy复制数组元素，比较适合底层调用，一般使用Arrays.copyOf完成复制数组</li>
+<li>currentTimeMillens：返回当前时间距离1970-1-1的毫秒数</li>
+<li>gc:运行垃圾回收机制</li>
+</ul>
+<h2 id="BigDecimal类和BigInteger类"><a href="#BigDecimal类和BigInteger类" class="headerlink" title="BigDecimal类和BigInteger类"></a>BigDecimal类和BigInteger类</h2><p>简单来说，这两个类是又大又精确，可以用来做精准计算。</p>
+<h3 id="常见方法"><a href="#常见方法" class="headerlink" title="常见方法"></a>常见方法</h3><ul>
+<li>add加</li>
+<li>subtract减</li>
+<li>multiply乘</li>
+<li>divide除</li>
+</ul>
+<h2 id="Date类"><a href="#Date类" class="headerlink" title="Date类"></a>Date类</h2><p>第一代第二代了解一下就好，都用第三代的</p>
+<h3 id="第一代日期类"><a href="#第一代日期类" class="headerlink" title="第一代日期类"></a>第一代日期类</h3><ul>
+<li>Date<br>&#x2F;&#x2F;精确到毫秒，代表特定的瞬间</li>
+<li>SimpleDateFormat<br>&#x2F;&#x2F;格式和解析日期的类</li>
+</ul>
+<h3 id="第二代日期类"><a href="#第二代日期类" class="headerlink" title="第二代日期类"></a>第二代日期类</h3><p>Calendar（日期）类是一个抽象类，它为特定瞬间与一组诸如YEAR,MONTH,DAY_OF_MONTH,HOUR等日历字段之间的转换提供了一些方法，并为操作日历字段提供了一些方法</p>
+<h3 id="第三代日期类"><a href="#第三代日期类" class="headerlink" title="第三代日期类"></a>第三代日期类</h3><ul>
+<li>LocalDate(日期)，LocalTime(时间)，LocalDateTime(日期时间)，jdk8加入</li>
+<li>DateTimeFormatter格式日期类</li>
+</ul>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left "
+    
+      href="/2025/08/02/%E9%9B%86%E5%90%88/"
+      title="集合"
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+      
+        集合
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2025/08/02/%E5%BC%82%E5%B8%B8/"
+      title="异常"
+     >
+
+    <p class="title-text">
+      
+        异常
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+  
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <div id="comment-card" class="comment-card">
+    <div class="main-title-bar">
+      <div class="main-title-dot"></div>
+      <div class="main-title">留言 </div>
+    </div>
+    <div id="vcomments"></div>
+  </div>
+  <script>
+      new Valine({"enable":true,"appId":"nllUSWQEMs0La7CYajWCfp0g-gzGzoHsz","appKey":"aLiW829Tcl5EMKjuEKj2RAK5","placeholder":"留下你宝贵的留言！","pageSize":10,"highlight":true,"serverURLs":"https://nlluswqe.lc-cn-n1-shared.com","el":"#vcomments"});
+  </script>
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2025 acan<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>

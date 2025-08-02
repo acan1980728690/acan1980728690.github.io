@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="false" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>acan的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="搭个博客方便别人看也方便自己看，有个模版好看多了">
+<meta property="og:type" content="website">
+<meta property="og:title" content="acan的博客">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="acan的博客">
+<meta property="og:description" content="搭个博客方便别人看也方便自己看，有个模版好看多了">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="acan">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="acan的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/avatar.jpg">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=" is_home "  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>acan的博客 </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS 订阅">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/images/avatar.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">acan </div>
+      <div class="dot"></div>
+      <div class="subtitle">这是acan的个人博客，记录我的学习生活，希望能对你有用 </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/acan1980728690?tab=repositories" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">
+                通用Web基础
+                <div class="category-count">5</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Java/">
+                Java
+                <div class="category-count">11</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/">
+                基础
+                <div class="category-count">11</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                面向对象
+                <div class="category-count">3</div>
+            </a>
+        </div></div></div></div></div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/ArrayList/" rel="tag">ArrayList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Arrays%E7%B1%BB/" rel="tag">Arrays类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/BigDecimal%E7%B1%BB%E5%92%8CBigInteger%E7%B1%BB/" rel="tag">BigDecimal类和BigInteger类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Collections/" rel="tag">Collections</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Date%E7%B1%BB/" rel="tag">Date类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashMap/" rel="tag">HashMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashSet/" rel="tag">HashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/HashTable/" rel="tag">HashTable</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedHashSet/" rel="tag">LinkedHashSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LinkedList/" rel="tag">LinkedList</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Math%E7%B1%BB/" rel="tag">Math类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Properties/" rel="tag">Properties</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuffer%E7%B1%BB/" rel="tag">StringBuffer类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/StringBuilder%E7%B1%BB/" rel="tag">StringBuilder类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/String%E7%B1%BB/" rel="tag">String类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/System%E7%B1%BB/" rel="tag">System类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeMap/" rel="tag">TreeMap</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/TreeSet/" rel="tag">TreeSet</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Vector/" rel="tag">Vector</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/final%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">final关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/static/" rel="tag">static</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/this%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">this关键字</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/" rel="tag">代码块</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag">作用域</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%86%85%E9%83%A8%E7%B1%BB/" rel="tag">内部类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85/" rel="tag">包</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8C%85%E8%A3%85%E7%B1%BB/" rel="tag">包装类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/" rel="tag">可变参数</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90/" rel="tag">对象创建的流程分析</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" rel="tag">抽象类</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8E%A5%E5%8F%A3/" rel="tag">接口</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/" rel="tag">方法的重载</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%99%A8/" rel="tag">构造器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%90%86%E8%A7%A3main/" rel="tag">理解main</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/" rel="tag">访问修饰符</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%86%E5%90%88/" rel="tag">集合</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" rel="tag">面向对象三大特征</a></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+      
+   
+
+
+<article id="post-面向对象中级" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%BA%A7/">面向对象中级</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-01T12:04:36.000Z" itemprop="datePublished">2025-08-01</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Java/">Java</a>><a class="meta-cate-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/">基础</a>><a class="meta-cate-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            3.1k 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Object%E7%B1%BB/" rel="tag">Object类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8C%85/" rel="tag">包</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6/" rel="tag">访问修饰符</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81/" rel="tag">面向对象三大特征</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              包 包的作用
+区分相同的类当类很多的时候，可以很好的管理类控制访问范围
+ 基本语法
+1package somethong
+package关键字，表示打包，something表示包名
+包的本质
+实际上就是创建了不同的文件夹来保存类文件
+包的命名
+命名规则
+
+只能包含数字，字母，下划线，但是不能用数字开头，也不能是关键字或保留字
+
+命名规范
+
+一般是小写字母+小圆点
+com.公司名.项目名.业务模块名
+
+常用的包   
+
+java.lang默认引入，不需要再引入
+java.util 系统提供的工具包，工具类，使用Scanner
+java.net网络包
+java.awt 做java的界面开发
+
+引入包
+import 包
+import java.util.Scanner;表示只引入一个类Scanner
+import java.util.*;表示将java.util的包全部都引入
+访问修饰符四种修饰符,public,protected,默认,private
+
+public:对外公开
+protected,对子类和同一个包中的类公开
+默认：没有修饰符，对同一个包的类公开
+private:只有类...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%BA%A7/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-面向对象基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/">面向对象基础</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-01T11:53:27.000Z" itemprop="datePublished">2025-08-01</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Java/">Java</a>><a class="meta-cate-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/">基础</a>><a class="meta-cate-link" href="/categories/Java/%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            2.2k 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/this%E5%85%B3%E9%94%AE%E5%AD%97/" rel="tag">this关键字</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="tag">作用域</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/" rel="tag">可变参数</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E7%9A%84%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90/" rel="tag">对象创建的流程分析</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/" rel="tag">方法的重载</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9E%84%E9%80%A0%E5%99%A8/" rel="tag">构造器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%80%92%E5%BD%92/" rel="tag">递归</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              面向对象基础递归递归的意思就是函数自己调用自己
+示例：
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061public class Queen &#123;    public static void main(String[] args) &#123;        int[][] board = new int[8][8];        T t = new T();        for(int i=0;i&lt;8;i++) &#123;            for (int j = 0; j &lt; 8; j++) &#123;                board[i][j] = 0;            &#125;        &#125;        t.placeQueen(board,0);    &#125;&#125;class T&#123;    int[] re...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/01/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-XML" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/01/XML/">XML</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-01T11:52:08.000Z" itemprop="datePublished">2025-08-01</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">通用Web基础</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            29 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              知道这玩意和html差不多而且主要用来配置各种东西即可
+详细
+
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/01/XML/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-REST风格" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/01/REST%E9%A3%8E%E6%A0%BC/">REST风格</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-01T11:50:32.000Z" itemprop="datePublished">2025-08-01</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">通用Web基础</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            325 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              REST（Representational State Transfer），表述性状态转换，它是一种软件架构风格
+示例
+1234http://localhost:8080/users/1       GET：查询id为1的用户http://localhost:8080/users          POST：新增用户http://localhost:8080/users          PUT：修改用户http://localhost:8080/users/1       DELETE：删除id为1的用户
+
+其中总结起来，就一句话：通过URL定位要操作的资源，通过HTTP动词(请求方式)来描述具体的操作。
+REST风格的URL中，通过四种请求方式，来操作数据增删改查
+
+GET ：  查询
+POST ：新增
+PUT ：  修改
+DELETE ：删除
+
+
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/01/REST%E9%A3%8E%E6%A0%BC/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-JSON" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/01/JSON/">JSON</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-01T11:46:59.000Z" itemprop="datePublished">2025-08-01</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">通用Web基础</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            378 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              主要是一种简单的用来传输数据的格式，轻量级、易于阅读和编写。特点是都有””包裹的键值对，键和值之间用冒号:分隔，键值对之间用逗号,分隔。
+简单示例
+1234567891011121314&#123;    &quot;name&quot;:&quot;aaa&quot;,    &quot;age&quot;:18,    &quot;isStudent&quot;:true,    &quot;hobbies&quot;:[&quot;reading&quot;,&quot;swimming&quot;],    &quot;address&quot;:&#123;        &quot;street&quot;:&quot;xxx&quot;,         &quot;city&quot;:&quot;yyy&quot;,        &quot;state&quot;:&quot;zzz&quot;        &#125;    &#125;
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/01/JSON/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-HTTP" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/01/HTTP/">HTTP</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-01T11:46:01.000Z" itemprop="datePublished">2025-08-01</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">通用Web基础</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            15 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              懒得写，Http实在太基础了。
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/01/HTTP/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-Ajax" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/01/Ajax/">Ajax</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-01T11:08:54.000Z" itemprop="datePublished">2025-08-01</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E9%80%9A%E7%94%A8Web%E5%9F%BA%E7%A1%80/">通用Web基础</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            445 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              详细ajax
+什么是ajax
+AJAX&#x3D;Asynchronous JavaScript and XML(异步的JavaScript和XML)。
+AJAX不是新的编程语言，而是一种使用现有标准的新方法。
+AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分网页内容。
+AJAX不需要任何浏览器插件，但需要用户允许 JavaScript 在浏览器上执行。
+XMLHttpRequest 只是实现 Ajax的一种方式
+
+
+ajax工作原理
+简单来说,我们之前发的请求通过类似 form表单标签,a标签 这种方式,现在通过 运行js代码动态决定什么时候发送什么样的请求
+通过运行JS代码发送的请求浏览器可以不用跳转而面，我们可以在,JS代码中决定是否要跳转而面
+通过运行JS代码发送的请求,接收到返回结果后,我们可以将结果通过dom编程渲染到页面的某些元素上,实现局部更新
+
+同步交互与异步交互
+实现方式
+原生js，很麻烦，					jdbc
+第三方封装好的工具，jquery		baseDAO
+框架 VUE axios					Mybatis
+
+
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/01/Ajax/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  <nav id="page-nav">
+    <!-- 在第二页时 page.prev_link 不知为何无法返回正确的链接 -->
+    <a id="prev-btn" class="page-nav-btn " href=" /  ">
+      <i class="fa-solid fa-angle-left"></i>
+    </a>
+    <div id="num-bar">
+      <a class="page-number" href="/">1</a><span class="page-number current">2</span>  
+    </div>
+    <a id="next-btn" class="page-nav-btn disabled" href="/">
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+  </nav>
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2025 acan<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>
