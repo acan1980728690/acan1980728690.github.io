@@ -1,7 +1,7 @@
 ---
 title: Mybatis
 published: 2025-08-03 16:14:43
-tags: [JavaWeb,黑马SSM]
+tags: [JavaWeb,黑马SSM,Mybatis]
 category: 黑马SSM
 draft: false
 ---
