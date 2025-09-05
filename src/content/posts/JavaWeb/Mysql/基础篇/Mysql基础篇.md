@@ -228,6 +228,8 @@ DQL执行顺序
 
 FROM -> WHERE -> GROUP BY -> SELECT -> ORDER BY -> LIMIT
 
+**当查询是否为空时，不能使用= null，而是应该使用is null，详细看文档**
+
 #### 基本查询
 
 语法如下：
